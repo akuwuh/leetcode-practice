@@ -3,8 +3,6 @@ class Solution:
         low = 0 #0 
         high = len(nums) - 1 #5
 
-        i = high
-
         while high - low > 1:
             mid = int((high + low)/2)
 
