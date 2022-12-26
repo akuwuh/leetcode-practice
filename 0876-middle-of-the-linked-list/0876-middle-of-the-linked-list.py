@@ -16,22 +16,12 @@ class Solution:
         
         current = head
         i = 0
-        ret = ListNode()
-        currnew = ret
-        
         while(current): 
             if i == counter:
-                ret.val = current.val
-                ret.next= None  
-            if i > counter:
-                new = ListNode(current.val, None)
-                currnew.next = new
-                currnew = currnew.next
+                return current
             
-            current = current.next
             i+=1
-                
-            
+            current = current.next
         
-        return ret
+        return current
     
