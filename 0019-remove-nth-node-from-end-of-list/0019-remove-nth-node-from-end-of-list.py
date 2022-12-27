@@ -12,14 +12,10 @@ class Solution:
             current = current.next
 
         if len == 1:
-            head = None 
-            return head
+            return None
 
         if len == n: 
-            temp = head
-            head = temp.next
-            temp.next = None
-            temp = None
+            return head.next
 
         current = head
         counter = len - n
