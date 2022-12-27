@@ -11,9 +11,6 @@ class Solution:
             len+=1
             current = current.next
 
-        if len == 1:
-            return None
-
         if len == n: 
             return head.next
 
