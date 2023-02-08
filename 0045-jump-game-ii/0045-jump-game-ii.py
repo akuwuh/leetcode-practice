@@ -12,11 +12,8 @@ class Solution:
                     index = i
             return index
         
-        if len(nums) == 1:
-            return 0
-        
-        if len(nums) == 2:
-            return 1
+        if len(nums) <= 2:
+            return len(nums) - 1
 
         if nums[0] == len(nums) - 2:
             return 2
