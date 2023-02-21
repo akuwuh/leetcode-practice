@@ -4,9 +4,7 @@ class Solution:
         n = len(nums)
 
         if n == 1: return nums[0]
-
         l, r = 0, n - 1
-
         # cases:
 
         # if m and m - 1 is the same val and r - m is even -> on left
@@ -27,16 +25,12 @@ class Solution:
                 return nums[m]
 
             elif nums[m] == nums[m-1]:
-                if (r-m)%2 == 0:
-                    r = m
-                else:
-                    l = m + 1
+                if (r-m)%2 == 0: r = m
+                else: l = m + 1
 
             else: # nums[m] == nums[m+1]
-                if (m-l)%2 == 1:
-                    r = m - 1
-                else:
-                    l = m
+                if (m-l)%2 == 1: r = m - 1
+                else: l = m
         return nums[l] if nums[m] == nums[m+1] else nums[r]
 
             
